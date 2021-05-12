@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+
+<style type="text/css">
+	body {
+  	background-image: url('image/bg.jpg');
+			 background-size: cover;
+			 background-attachment: fixed;
+			 margin:0;
+			 padding:0;
+	}
+	form{
+		color: white;
+		text-shadow: 1px 1px 1px solid white;
+		font-family: Bookman Old Style;
+		font-size: 20px;
+		margin-top: 200px;
+	}
+	.log{
+		color: black;
+		text-shadow: white;
+		font-family: Times New Roman;
+	}
+	h1{
+			text-align: center;
+			color: red;
+			font-size: 15px;
+		}
+		img{
+			width: 70px;
+           	height: :90px;
+           	position:absolute;
+			transform: translate(-50%, -50%);
+			padding: 0 20px;
+			text-align: center;
+
+         }
+</style>
+<body>
+	<center>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="trans">
+		<form>
+			<center> <img src="image/ucu.png" > </center>
+		<br>
+		<br>
+		<h1> URDANETA CITY UNIVERSITY </h1>
+			Username: <input type="text" id="uname" class="user"><br>
+			<br>
+			Password: <input type="password" id="pswrd" class="pass"><br>
+		</form>
+		<br>
+		<input type="submit" onclick="login()" value="LOGIN" class="log">
+		</div>
+	</center>
+
+	<script type="text/javascript">
+		
+		function login(){
+			var duname = "Venus";
+			var dpswrd = "Bombay";
+
+			uname = document.getElementById('uname').value;
+			pswrd = document.getElementById('pswrd').value;
+
+			if (duname == uname  && dpswrd == pswrd){
+				alert(" Access Granted. Hello " +uname);
+			}
+			else if (dpswrd == pswrd){
+				alert("Invalid username");
+			}
+			else if(duname == uname){
+				alert("Invalid Password.");
+			}
+			else{
+				alert("Access Denied. ");
+			}
+		}
+
+	</script>
+
+
+</body>
+</html>
